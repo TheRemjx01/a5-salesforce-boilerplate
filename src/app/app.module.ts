@@ -9,6 +9,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {VisualforceModule} from 'salesforce-ng5-remote';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import {ProductService} from './product.service';
 
 
 @NgModule({
@@ -26,7 +27,9 @@ import { ProductFormComponent } from './product-form/product-form.component';
       apexController: 'SPA_HomePageCC'
     })
   ],
-  providers: [],
+  providers: [
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

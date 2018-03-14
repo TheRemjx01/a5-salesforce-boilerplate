@@ -9,14 +9,15 @@ import {ProductFormComponent} from "./product-form/product-form.component";
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+
   {
     path: 'product',
     children: [
       {path: '', pathMatch: 'full', component: ProductListComponent},
       {path: ':id', component: ProductFormComponent}
     ]
-  }
+  },
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 
 @NgModule({

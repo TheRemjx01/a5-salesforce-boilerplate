@@ -32,3 +32,14 @@ Not has `concurrently` and `ngrok`.
 Invalid host header.
 
 BaseUrl Problem.
+
+
+## Setup in this guide
+
+Prepare your API in Salesforce Controller
+
+Prepare your service , i.e `ProductService`
+
+Prepare your component
+
+Install `angular-material` library
