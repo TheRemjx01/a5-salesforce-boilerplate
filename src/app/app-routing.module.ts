@@ -3,11 +3,20 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import {LoginComponent} from "./login/login.component";
 import {HomeComponent} from "./home/home.component";
+import {ProductListComponent} from "./product-list/product-list.component";
+import {ProductFormComponent} from "./product-form/product-form.component";
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
-  {path: '', redirectTo: '/home', pathMatch: 'full'}
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {
+    path: 'product',
+    children: [
+      {path: '', pathMatch: 'full', component: ProductListComponent},
+      {path: ':id', component: ProductFormComponent}
+    ]
+  }
 ];
 
 @NgModule({
